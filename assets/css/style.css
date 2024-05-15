@@ -4,3 +4,17 @@ h1 {
 p {
   color: rgba(0, 0, 0, 0.659);
 }
+div {
+  display: inline-flex;
+  padding: 2rem 3rem;
+  align-items: center;
+}
+img {
+  width: 40%;
+  border-radius: 6%;
+  max-height: 45vh;
+}
+article {
+  padding: 0 2rem;
+  text-align: justify;
+}

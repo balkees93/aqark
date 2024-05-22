@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AQARK</title>
+    <link href="assets/css/contactUsStyle.css" rel="stylesheet" />
+    <style>
+        ul a {
+            text-decoration: none;
+            padding: 0 2rem;
+            color: white;
+        }
+
+        ul a:active {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" style="background-color: darkcyan; padding: .7rem 0;">
+        <ul style="display: flex;
+        list-style: none;
+        justify-content: center;
+">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About US</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+
+    </div>
+
+    <section class="contactUs">
+        <section class="contactUs__left">
+            <h1>
+                <strong class="contactUs__left__header">Get in touch
+                </strong>
+            </h1>
+            <p class="contactUs__left__pragh">
+                For any further inquiries or requests, contact our team through our hotline or mail
+
+            </p>
+            <section class="contactUs__left__info">
+                <a href="tel:16407" class="call">
+                    <article class="contacts">
+                        <figure class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <g id="Layer_3" data-name="Layer 3" transform="translate(-1 -1)">
+                                    <path id="Path_1673" data-name="Path 1673"
+                                        d="M18.421,13.956c-.032-.026-3.625-2.6-4.6-2.429-.469.083-.737.4-1.274,1.042-.086.1-.295.35-.455.526a7.475,7.475,0,0,1-.991-.4A8.22,8.22,0,0,1,7.308,8.9a7.475,7.475,0,0,1-.4-.991c.176-.161.424-.37.529-.458.637-.534.956-.8,1.039-1.271.17-.971-2.4-4.568-2.429-4.6A1.373,1.373,0,0,0,5.02,1C3.977,1,1,4.862,1,5.513c0,.038.055,3.88,4.793,8.7C10.607,18.945,14.45,19,14.487,19,15.138,19,19,16.023,19,14.98a1.372,1.372,0,0,0-.579-1.024Z"
+                                        transform="translate(0)" />
+                                </g>
+                            </svg>
+                        </figure>
+                        <p class="call">16407</p>
+                    </article>
+                </a>
+                <article class="contacts">
+                    <figure class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13.656" height="19.005"
+                            viewBox="0 0 13.656 19.005">
+                            <g id="placeholder_1_" data-name="placeholder (1)" transform="translate(0.5 0.5)">
+                                <path id="Path_43" data-name="Path 43"
+                                    d="M82.328,0A6.333,6.333,0,0,0,76,6.328a6.24,6.24,0,0,0,.949,3.322l4.95,8.1a.5.5,0,0,0,.359.243.525.525,0,0,0,.538-.253L87.76,9.566a6.241,6.241,0,0,0,.9-3.238A6.333,6.333,0,0,0,82.328,0Zm0,9.492a3.164,3.164,0,1,1,3.164-3.164A3.16,3.16,0,0,1,82.328,9.492Z"
+                                    transform="translate(-76)" stroke-width="1" />
+                            </g>
+                        </svg>
+                    </figure>
+                    <div style="display: flex; flex-direction: column">
+                        <p>114 Centro Mall, 5th Settlement
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="contacts">
+                    <figure class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13.481" viewBox="0 0 18 13.481">
+                            <g id="email_1_" data-name="email (1)" transform="translate(0 -64.266)">
+                                <path id="Path_1679" data-name="Path 1679"
+                                    d="M10.5,176.4a2.707,2.707,0,0,1-3.009,0L.12,171.487q-.061-.041-.12-.085v8.058a1.656,1.656,0,0,0,1.657,1.657H16.343A1.656,1.656,0,0,0,18,179.46V171.4q-.059.044-.12.085Z"
+                                    transform="translate(0 -103.369)" />
+                                <path id="Path_1680" data-name="Path 1680"
+                                    d="M.7,67.24l7.376,4.917a1.653,1.653,0,0,0,1.838,0L17.3,67.24a1.579,1.579,0,0,0,.7-1.317,1.658,1.658,0,0,0-1.656-1.656H1.656A1.659,1.659,0,0,0,0,65.923,1.579,1.579,0,0,0,.7,67.24Z" />
+                            </g>
+                        </svg>
+                    </figure>
+                    <p class="contact_email"><a href="mailto:contact@eshtrigroup.com">contact@eshtrigroup.com</a></p>
+                </article>
+            </section>
+        </section>
+        <section class="contactUs__right">
+            <h1>
+                <strong class="contactUs__right__header">Mail us</strong>
+            </h1>
+            <p class="contactUs__right__pragh">
+                Send us an email with any questions you may have We reply to every email, and we reply fast
+
+            </p>
+
+            <form class="example-form contactUs__right__form--block">
+                <div class="row-input">
+                    <!--full name-->
+                    <input type="text" [formControl]="fullName" placeholder="Ahmed Mohamed" />
+                    <!--number-->
+                    <input type="tel" placeholder="012548795874" [formControl]="phone" #contactUsInput />
+                </div>
+                <!--mail-->
+                <input type="email" placeholder="example@example.com" [formControl]="email" />
+
+                <!--massage-->
+                <textarea [rows]="6" [formControl]="msg" placeholder="Note"></textarea>
+
+                <section class="contactUs__right__form__footer">
+                    <button type="submit" [disabled]="reqSend">Submit</button>
+                </section>
+            </form>
+        </section>
+    </section>
+    <section class="contact__social">
+        <h4>
+            <strong>Contact Us Through Our Social Accounts
+            </strong>
+        </h4>
+        <section>
+            <figure>
+                <a href="https://www.facebook.com/EshtriAqar" title="facebook" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.219" height="30" id="facebook"
+                        viewBox="0 0 16.219 30">
+                        <g id="_x30_1._Facebook" transform="translate(-28.374 -9.999)">
+                            <path id="Icon_11_"
+                                d="M32.9,26.937c-.118,0-2.588,0-3.727,0-.586,0-.8-.211-.8-.8q0-2.274,0-4.548c0-.583.222-.805.8-.805H32.9c0-.1,0-2.293,0-3.3a8.231,8.231,0,0,1,1.024-4.223,6.217,6.217,0,0,1,3.349-2.782A8.278,8.278,0,0,1,40.14,10q1.844,0,3.688,0c.528,0,.763.234.764.766q0,2.139,0,4.278c0,.538-.225.754-.766.76-1.008.011-2.016,0-3.022.045A1.369,1.369,0,0,0,39.252,17.4c-.024,1.113-.01,2.227-.01,3.381h4.341c.614,0,.824.211.824.829q0,2.262,0,4.524c0,.609-.2.8-.816.8H39.23v12.2c0,.651-.2.858-.847.858h-4.7c-.567,0-.789-.22-.789-.788,0-3.975,0-12.135,0-12.274Z"
+                                fill="#3d6ad6" />
+                        </g>
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.linkedin.com/company/eshtri-aqar/?viewAsMember=true" title="linkedin"
+                    target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" id="linkedin" height="30" viewBox="0 0 30 30">
+                        <g id="_x31_0.Linkedin" transform="translate(-10 -10)">
+                            <path id="Path_1670" data-name="Path 1670"
+                                d="M57.678,55.779h.007v-11c0-5.382-1.159-9.529-7.451-9.529a6.533,6.533,0,0,0-5.884,3.234h-.087V35.75H38.3V55.778H44.51V45.861c0-2.611.5-5.136,3.729-5.136,3.186,0,3.234,2.98,3.234,5.3v9.751Z"
+                                transform="translate(-17.686 -15.779)" fill="#0073b1" />
+                            <path id="Path_1671" data-name="Path 1671" d="M11.32,36.59h6.22V56.619H11.32Z"
+                                transform="translate(-0.825 -16.619)" fill="#0073b1" />
+                            <path id="Path_1672" data-name="Path 1672"
+                                d="M13.6,10a3.62,3.62,0,1,0,3.6,3.6A3.6,3.6,0,0,0,13.6,10Z" fill="#0073b1" />
+                        </g>
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://twitter.com/EshtriAqar" title="twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24.375" id="twitter"
+                        viewBox="0 0 30 24.375">
+                        <path id="_x30_4.Twitter"
+                            d="M40,20.386a12.823,12.823,0,0,1-3.544.971,6.116,6.116,0,0,0,2.706-3.4,12.291,12.291,0,0,1-3.9,1.489,6.15,6.15,0,0,0-10.639,4.206,6.333,6.333,0,0,0,.142,1.4,17.408,17.408,0,0,1-12.677-6.433,6.159,6.159,0,0,0,1.89,8.22,6.074,6.074,0,0,1-2.779-.757,6.2,6.2,0,0,0,4.927,6.111,6.1,6.1,0,0,1-2.777.1A6.209,6.209,0,0,0,19.1,36.576,12.332,12.332,0,0,1,10,39.115a17.315,17.315,0,0,0,9.435,2.76c11.317,0,17.505-9.375,17.505-17.5,0-.272-.009-.534-.022-.8A12.269,12.269,0,0,0,40,20.386Z"
+                            transform="translate(-10 -17.5)" fill="#1da1f3" />
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.youtube.com/channel/UC6_KuHIp1nbRn73v5Zw202w" title="youtube" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" id="youtube" height="21.442"
+                        viewBox="0 0 30 21.442">
+                        <g id="_x30_2.YouTube_1_" transform="translate(-10 -21.411)">
+                            <path id="Icon_23_"
+                                d="M34.325,21.411H15.675A5.675,5.675,0,0,0,10,27.087V37.177a5.675,5.675,0,0,0,5.675,5.675H34.324A5.675,5.675,0,0,0,40,37.177V27.087a5.675,5.675,0,0,0-5.675-5.676ZM21.048,36.731v-9.2l7.9,4.608Z"
+                                fill="red" />
+                        </g>
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.instagram.com/eshtriaqar/" title="instagram" target="_blank">
+                    <svg id="Group_2911" data-name="Group 2911" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                        <defs>
+                            <linearGradient id="linear-gradient" x1="0.5" y1="0.008" x2="0.5" y2="0.998"
+                                gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="#e09b3d" />
+                                <stop offset="0.3" stop-color="#c74c4d" />
+                                <stop offset="0.6" stop-color="#c21975" />
+                                <stop offset="1" stop-color="#7024c4" />
+                            </linearGradient>
+                            <linearGradient id="linear-gradient-2" y1="-0.451" y2="1.462"
+                                xlink:href="#linear-gradient" />
+                            <linearGradient id="linear-gradient-3" y1="-1.396" y2="6.586"
+                                xlink:href="#linear-gradient" />
+                        </defs>
+                        <path id="Path_1697" data-name="Path 1697"
+                            d="M21.063,0H8.937A8.947,8.947,0,0,0,0,8.937V21.063A8.947,8.947,0,0,0,8.937,30H21.063A8.947,8.947,0,0,0,30,21.063V8.937A8.947,8.947,0,0,0,21.063,0Zm5.919,21.063a5.919,5.919,0,0,1-5.919,5.919H8.937a5.919,5.919,0,0,1-5.919-5.919V8.937A5.919,5.919,0,0,1,8.937,3.018H21.063a5.919,5.919,0,0,1,5.919,5.919V21.063Z"
+                            fill="url(#linear-gradient)" />
+                        <path id="Path_1698" data-name="Path 1698"
+                            d="M140.759,133a7.759,7.759,0,1,0,7.759,7.759A7.768,7.768,0,0,0,140.759,133Zm0,12.5a4.741,4.741,0,1,1,4.741-4.741A4.741,4.741,0,0,1,140.759,145.5Z"
+                            transform="translate(-125.759 -125.759)" fill="url(#linear-gradient-2)" />
+                        <circle id="Ellipse_50" data-name="Ellipse 50" cx="1.859" cy="1.859" r="1.859"
+                            transform="translate(20.915 5.44)" fill="url(#linear-gradient-3)" />
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.tiktok.com/@eshtriaqar?lang=en" title="tiktok" target="_blank">
+                    <svg id="tiktok" xmlns="http://www.w3.org/2000/svg" width="26.499" height="30"
+                        viewBox="0 0 26.499 30">
+                        <g id="Group_2910" data-name="Group 2910" transform="translate(0 0)">
+                            <path id="Path_1692" data-name="Path 1692"
+                                d="M119.49,80.316a9.1,9.1,0,0,1-4.7-1.627c-1.876-1.372-2.525-4.352-2.628-5.46V73.08h-4.571V92.8a4.3,4.3,0,1,1-4.3-4.3h1.442V83.928h-1.442a8.869,8.869,0,1,0,8.869,8.869V82.428a13.436,13.436,0,0,0,7.318,2.458h0l0-4.571h.016Z"
+                                transform="translate(-94.42 -73.08)" fill="#00f7ef" opacity="0.75" />
+                            <path id="Path_1693" data-name="Path 1693"
+                                d="M136.91,97.546a9.1,9.1,0,0,1-4.7-1.627c-1.876-1.372-2.525-4.352-2.628-5.46V90.31h-4.571v19.717a4.3,4.3,0,1,1-4.3-4.3h1.442v-4.571h-1.442a8.869,8.869,0,1,0,8.869,8.869V99.659a13.436,13.436,0,0,0,7.318,2.458h0l0-4.571Z"
+                                transform="translate(-110.411 -88.897)" opacity="0.75" />
+                        </g>
+                        <g id="Group_2905" data-name="Group 2905" transform="translate(3.388 1.413)" opacity="0.75">
+                            <g id="Group_2904" data-name="Group 2904" transform="translate(0 0)">
+                                <g id="Group_2901" data-name="Group 2901" transform="translate(14.572)">
+                                    <path id="Path_1694" data-name="Path 1694"
+                                        d="M313.46,90.31a7.443,7.443,0,0,0,2.405,4.2c.093.067.185.131.279.194a9.974,9.974,0,0,1-1.479-4.24v-.149h-1.2Z"
+                                        transform="translate(-313.46 -90.31)" fill="#f00044" />
+                                </g>
+                                <g id="Group_2902" data-name="Group 2902" transform="translate(0 7.039)">
+                                    <path id="Path_1695" data-name="Path 1695"
+                                        d="M158.86,176.348a8.1,8.1,0,0,1-1.442-.2l0,3.355h0a13.434,13.434,0,0,1-7.318-2.458v10.369a8.865,8.865,0,0,1-14.35,6.968,8.865,8.865,0,0,0,15.777-5.555V178.46a13.436,13.436,0,0,0,7.318,2.458h0l0-4.571Z"
+                                        transform="translate(-135.75 -176.15)" fill="#ff004f" />
+                                </g>
+                                <g id="Group_2903" data-name="Group 2903" transform="translate(1.182 10.848)">
+                                    <path id="Path_1696" data-name="Path 1696"
+                                        d="M155.91,225.758h-1.442a4.3,4.3,0,0,0-2.224,7.975,4.3,4.3,0,0,1,3.651-6.562h1.442V222.6H155.91Z"
+                                        transform="translate(-150.17 -222.6)" fill="#f00044" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.pinterest.com/business/hub/" title="pinterest" target="_blank">
+                    <svg id="pinterest" xmlns="http://www.w3.org/2000/svg" width="29.948" height="30"
+                        viewBox="0 0 29.948 30">
+                        <path id="pinterest-2" data-name="pinterest"
+                            d="M15.415,0a14.981,14.981,0,0,0-5.99,28.709,13.362,13.362,0,0,1,.258-3.46c.31-1.239,1.911-8.158,1.911-8.158a6.054,6.054,0,0,1-.465-2.375c0-2.22,1.291-3.873,2.892-3.873a2.024,2.024,0,0,1,2.014,2.272c0,1.343-.878,3.408-1.343,5.318a2.318,2.318,0,0,0,2.375,2.892c2.84,0,4.75-3.666,4.75-7.952,0-3.3-2.22-5.732-6.248-5.732a7.113,7.113,0,0,0-7.384,7.177,4.3,4.3,0,0,0,.981,2.943.733.733,0,0,1,.207.826c-.052.258-.258.929-.31,1.188a.53.53,0,0,1-.775.361c-2.117-.878-3.046-3.15-3.046-5.732,0-4.234,3.563-9.346,10.689-9.346,5.732,0,9.5,4.131,9.5,8.571,0,5.886-3.253,10.275-8.055,10.275a4.348,4.348,0,0,1-3.666-1.859s-.878,3.46-1.033,4.131a12.188,12.188,0,0,1-1.5,3.2,14.485,14.485,0,0,0,4.234.62,15,15,0,0,0,0-30"
+                            transform="translate(-0.441)" fill="#cb1f24" opacity="0.75" />
+                    </svg>
+                </a>
+            </figure>
+
+            <figure>
+
+            </figure>
+        </section>
+    </section>
+</body>
+
+</html>
